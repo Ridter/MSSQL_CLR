@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CLR_module</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <LangVersion>10.0</LangVersion>
+    <ProjectGuid>{29953b2d-b106-4887-94ff-cf22b9792e69}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql90DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+    <PermissionSet>UNSAFE</PermissionSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="PingCastle" />
+    <Folder Include="PingCastle\RPC" />
+    <Folder Include="CLR_module" />
+    <Folder Include="NativeAPI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sharpsql.cs" />
+    <Compile Include="PingCastle\NativeMethods.cs" />
+    <Compile Include="PingCastle\RPC\dcom.cs" />
+    <Compile Include="PingCastle\RPC\lsa.cs" />
+    <Compile Include="PingCastle\RPC\nativemethods.cs" />
+    <Compile Include="PingCastle\RPC\nrpc.cs" />
+    <Compile Include="PingCastle\RPC\nullsession.cs" />
+    <Compile Include="PingCastle\RPC\rpcapi.cs" />
+    <Compile Include="PingCastle\RPC\samr.cs" />
+    <Compile Include="PingCastle\RPC\spool.cs" />
+    <Compile Include="PingCastle\RPC\SSPI.cs" />
+    <Compile Include="CLR_module\Adduser.cs" />
+    <Compile Include="CLR_module\BadPotato.cs" />
+    <Compile Include="CLR_module\Basefun.cs" />
+    <Compile Include="CLR_module\COMM_FAULT_OFFSETS.cs" />
+    <Compile Include="CLR_module\Download.cs" />
+    <Compile Include="CLR_module\Dumplsass.cs" />
+    <Compile Include="CLR_module\EfsrTiny.cs" />
+    <Compile Include="CLR_module\Exec.cs" />
+    <Compile Include="CLR_module\Getav.cs" />
+    <Compile Include="CLR_module\LocalGroupUserHelper.cs" />
+    <Compile Include="CLR_module\MIDL_STUB_DESC.cs" />
+    <Compile Include="CLR_module\Potato.cs" />
+    <Compile Include="CLR_module\ProcessWaitHandle.cs" />
+    <Compile Include="CLR_module\RDP.cs" />
+    <Compile Include="CLR_module\RPC_CLIENT_INTERFACE.cs" />
+    <Compile Include="CLR_module\RPC_SYNTAX_IDENTIFIER.cs" />
+    <Compile Include="CLR_module\RPC_VERSION.cs" />
+    <Compile Include="CLR_module\Shellcodeloader.cs" />
+    <Compile Include="CLR_module\SharpToken.cs" />
+    <Compile Include="CLR_module\GodPotato.cs" />
+    <Compile Include="NativeAPI\GodPotatoContext.cs" />
+    <Compile Include="NativeAPI\GodPotatoUnmarshalTrigger.cs" />
+    <Compile Include="NativeAPI\IStreamImpl.cs" />
+    <Compile Include="NativeAPI\NativeMethods.cs" />
+    <Compile Include="NativeAPI\ObjRef.cs" />
+    <Compile Include="NativeAPI\UnmarshalDCOM.cs" />
+    <Compile Include="CLR_module\Patch.cs" />
+    <Compile Include="CLR_module\Sharploader.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CLR_module", "Database\CLR_module.sqlproj", "{29953B2D-B106-4887-94FF-CF22B9792E69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29953B2D-B106-4887-94FF-CF22B9792E69}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECE05DC4-1C0E-4D6D-B699-9B486425EFAF}
+	EndGlobalSection
+EndGlobal
