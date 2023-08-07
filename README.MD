@@ -9,4 +9,4 @@
 
 
 ## PySQLTools
-上述CLR已继承至 [PySQLTools](https://github.com/Ridter/PySQLTools)。
+上述CLR已集成至 [PySQLTools](https://github.com/Ridter/PySQLTools)。
